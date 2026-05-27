@@ -1,4 +1,6 @@
-#  Seoul Transit Weather Forecast
+## Seoul Transit Weather Forecast
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ssssooho/seoul-transit-weather-forecast/blob/main/seoul_transport_prediction.ipynb)
 
 서울시 행정동별 **대중교통 승객 수**를 기상 데이터와 결합해 예측하는 머신러닝 프로젝트입니다.
 
@@ -13,14 +15,14 @@
 | **모델** | Linear Regression / Decision Tree / Random Forest |
 | **튜닝** | Optuna를 활용한 하이퍼파라미터 최적화 |
 
+---
 
-
-##  데이터셋
+## 데이터셋
 
 | 파일명 | 출처 | 설명 |
 |--------|------|------|
-| `서울시_대중교통_승객수.csv` | 서울 열린데이터광장 | 행정동별 일별 승차 승객 수 (447,583건) |
-| `기상_관측_서울_2023.csv` | 기상청 기상자료개방포털 | 서울 일별 기온, 강수량, 풍속 등 (365건) |
+| `transport_sample.csv` | 서울 열린데이터광장 | 행정동별 일별 승차 승객 수 샘플 (10,000건) / [전체 데이터 다운로드](https://data.seoul.go.kr) |
+| `weather_2023.csv` | 기상청 기상자료개방포털 | 서울 일별 기온, 강수량, 풍속 등 (365건) |
 
 ---
 
@@ -72,6 +74,7 @@ jupyter notebook seoul_transport_prediction.ipynb
 ```
 
 ---
+
 ## 분석 흐름
 
 1. **데이터 로드 및 탐색** — 대중교통 데이터(44만 건)와 기상 데이터(365일) 구조 확인
@@ -83,8 +86,8 @@ jupyter notebook seoul_transport_prediction.ipynb
 
 ---
 
-##  한계 및 개선 방향
+## 한계 및 개선 방향
 
 - 행정동 ID를 범주형이 아닌 수치형으로 사용 → 향후 Label Encoding 또는 임베딩 적용 필요
 - 공휴일, 요일 등 시계열 특성 미반영 → Feature 추가 시 성능 향상 기대
-- 단일 연도(2023년) 데이터만 사용 → 다년도 데이터로 일반화 필요# ML-
+- 단일 연도(2023년) 데이터만 사용 → 다년도 데이터로 일반화 필요
